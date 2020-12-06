@@ -181,41 +181,47 @@
          margin-left: 40px;
          transform: translateY(25px);
       }
-   }
-   &__item-1,
-   &__item-3 {
-      position: relative;
-      &::before,
-      &::after {
-         content: "";
-         position: absolute;
-         background-repeat: no-repeat;
-         background-position: 0 0;
+      &:nth-child(3) {
+         margin-left: 30px;
       }
-   }
-   &__item-1 {
-      &::before {
-         width: 245px;
-         height: 48px;
-         background-image: url("../images/line-1.svg");
-         right: -56px;
-         top: 31px;
+      &:nth-child(4) {
+         margin-left: 60px;
       }
-   }
-   &__item-3 {
-      &::before {
-         width: 254px;
-         height: 40px;
-         background-image: url("../images/line-3.svg");
-         right: -55px;
-         top: 50px;
+      &:first-child,
+      &:nth-child(3) {
+         position: relative;
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+         }
       }
-      &::after {
-         width: 463px;
-         height: 62px;
-         background-image: url("../images/line-2.svg");
-         right: -54px;
-         top: -70px;
+      &:first-child {
+         &::before {
+            width: 245px;
+            height: 48px;
+            background-image: url("../images/line-1.svg");
+            right: -56px;
+            top: 31px;
+         }
+      }
+      &:nth-child(3) {
+         &::before {
+            width: 254px;
+            height: 43px;
+            background-image: url("../images/line-3.svg");
+            right: -55px;
+            top: 50px;
+         }
+         &::after {
+            width: 463px;
+            height: 62px;
+            background-image: url("../images/line-2.svg");
+            right: -54px;
+            top: -70px;
+         }
       }
    }
    &__num {
@@ -249,6 +255,50 @@
       @extend %ubuntu-bold;
    }
    &__info-text {
+      font-size: 15px;
+      line-height: 18px;
+   }
+}
+
+.specification {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__item {
+   }
+   &__box {
+      position: relative;
+      width: 280px;
+      margin-top: 10px;
+      &::before {
+         content: "";
+         position: absolute;
+      }
+   }
+   &__box-2 {
+      margin-top: 140px;
+   }
+   &__box-4 {
+      margin-top: 160px;
+   }
+   &__box-1::before {
+   }
+   &__box-2::before {
+   }
+   &__box-3::before {
+   }
+   &__box-4::before {
+   }
+   &__box-title {
+      margin-bottom: 10px;
+      font-size: 21px;
+      line-height: 28px;
+      @extend %ubuntu-bold;
+   }
+   &__box-text {
+      font-weight: 300;
       font-size: 15px;
       line-height: 18px;
    }
