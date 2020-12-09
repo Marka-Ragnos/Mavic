@@ -48,6 +48,7 @@ gulp.task('js', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/fullpage.js/dist/fullpage.js',
+    'node_modules/fullpage.js/vendors/scrolloverflow.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -63,7 +64,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('export', function(){
+gulp.task('export', function () {
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
@@ -77,7 +78,7 @@ gulp.task('export', function(){
     .pipe(gulp.dest('dist/fonts'));
 
   let BuildImg = gulp.src('app/img/**/*.*')
-    .pipe(gulp.dest('dist/img'));   
+    .pipe(gulp.dest('dist/img'));  
 });
 
 gulp.task('watch', function(){
